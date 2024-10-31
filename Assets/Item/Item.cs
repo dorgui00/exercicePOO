@@ -5,7 +5,9 @@ using UnityEngine.Events;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] UnityEvent _destroyFeedback;
+    [SerializeField] protected UnityEvent _destroyFeedback;
+    [SerializeField] protected EntityHealth _health;
+    [SerializeField] protected   HealthUI _healthUI;
 
     public virtual void Use(PickUpItem pui)
     {
@@ -13,7 +15,7 @@ public class Item : MonoBehaviour
         // consume bag
 
         _destroyFeedback?.Invoke();
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2f);
     }
 
 }

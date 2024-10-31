@@ -14,6 +14,11 @@ public class EntityHealth : MonoBehaviour
 
     [SerializeField] UnityEvent _onDie;
 
+    public int MaxHealth
+    {
+        get{return _maxHealth;}
+    }
+
     public int CurrentHealth
     {
         get { return _curientLife; }

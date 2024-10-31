@@ -13,7 +13,7 @@ public class DamageZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Le joueur est entré dans la zone");
+            Debug.Log("Le joueur est entrï¿½ dans la zone");
             StartCoroutine(DamagePlayer());
         }
     }
@@ -29,12 +29,14 @@ public class DamageZone : MonoBehaviour
 
     private IEnumerator DamagePlayer()
     {
-        while (true) 
+        while(true)
         {
-            _health.TakeDamage(damageAmount);
+             _health.TakeDamage(damageAmount);
             _healthUI.DeggaUI();
             Debug.Log(_health.CurrentHealth);
             yield return new WaitForSeconds(2f);
         }
+            
+        
     }
 }

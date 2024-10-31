@@ -21,7 +21,7 @@ public class HealthUI : MonoBehaviour
     public void DeggaUI()
     {
         _slider.value = _playerHealth.CurrentHealth;
-        _text.text = $"{_playerHealth.CurrentHealth} / {_playerHealth.CurrentHealth}";
+        _text.text = $"{_playerHealth.CurrentHealth} / {_playerHealth.MaxHealth}";
     }
 
 }
